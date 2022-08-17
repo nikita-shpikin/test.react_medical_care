@@ -13,13 +13,17 @@ module.exports = {
     filename: mode === 'production' ? '[name].[contenthash].js' : '[name].js',
     clean: true,
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: mode === 'production' ? '[name].[contenthash].html' : '[name].html',
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: mode === 'production' ? '[name].[contenthash].css' : '[name].css'
+      filename: mode === 'production' ? '[name].[contenthash].css' : '[name].css',
     }),
   ],
 
@@ -29,12 +33,26 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          }
+        }
+      },
     ],
   },
   devServer: {
     historyApiFallback: true,
     static: {
-      directory: './src',
+      directory: './dist',
       watch: true,
     },
     port: 0000,
