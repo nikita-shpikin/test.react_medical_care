@@ -1,0 +1,101 @@
+.main {
+  padding: 96px 100px 30px 197px;
+}
+
+.title {
+  max-width: 727px;
+  font-family: 'Montserrat';
+  font-size: 58px;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+}
+
+.wrapper {
+  margin-top: 35px;
+  max-width: 295px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 15px 40px;
+  background: #FFFFFF;
+  border: 1px solid #FF685B;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #FF685B;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #FF685B;
+  color: #FFFFFF;
+}
+
+.cards {
+  margin-top: 96px;
+  max-width: 1045px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 288px;
+  height: 213px;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  margin-bottom: 30px;
+  padding: 35px 0 0 40px;
+}
+
+.cardTitle {
+  margin-top: 20px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #252B42;
+}
+
+.text {
+  margin-top: 40px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  position: relative;
+}
+
+.text::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #E74040;
+  top: -20px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .main {
+    padding: 55px 10px 30px 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
