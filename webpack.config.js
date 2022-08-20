@@ -59,7 +59,7 @@ module.exports = {
       directory: './dist',
       watch: true,
     },
-    port: 0000,
+    port: 8080,
     compress: true,
     hot: true,
     open: true,
