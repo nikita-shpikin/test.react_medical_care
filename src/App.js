@@ -7,10 +7,11 @@ import './style.css';
 
 const App = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [isAuth, setIsAuth] = useState(false);
 
   return (
     <Routes>
-      <Route path='/*' element={<Header openModal={openModal} setOpenModal={setOpenModal} />} >
+      <Route path='/*' element={<Header setOpenModal={setOpenModal} isAuth={isAuth} setIsAuth={setIsAuth} />} >
         <Route index element={<Main openModal={openModal} setOpenModal={setOpenModal} />} />
         <Route path='contacts' element={<Contacts openModal={openModal} setOpenModal={setOpenModal} />} />
       </Route>

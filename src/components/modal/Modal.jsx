@@ -5,8 +5,9 @@ const Modal = ({ openModal, setOpenModal }) => {
   return (
     <div className={openModal ? (style.modal + ' ' + style.open) : style.modal} onClick={() => setOpenModal(false)}>
       <div className={style.mocalContent} onClick={e => e.stopPropagation()}>
-        <input type="text" placeholder='логин' />
-        <input type="text" placeholder='пароль' />
+        <input type="text" placeholder='логин' className={style.input} />
+        <input type="text" placeholder='пароль' className={style.input} />
+        <button className={style.button}>Войти</button>
       </div>
     </div >
   );
