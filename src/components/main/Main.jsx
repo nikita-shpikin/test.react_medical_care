@@ -15,9 +15,9 @@ const Main = ({ openModal, setOpenModal }) => {
       {isAuth
         ? <div className={style.main}>
           <h1 className={style.title} style={{ marginTop: '45px' }}>Привет, Сергей</h1>
-          <div className={style.wrapper} style={{ maxWidth: '477px' }}>
-            <button className={style.button} onClick={() => setIsAuth(false)}> Выйти из аккаунта </button>
-            <Link to='/contacts' className={style.button}>Перейти в контакты</Link>
+          <div className={style.wrapper + ' ' + style.authWrapper} >
+            <button className={style.button + ' ' + style.authButton} onClick={() => setIsAuth(false)} > Выйти из аккаунта </button>
+            <Link to='/contacts' className={style.button + ' ' + style.authButton} >Перейти в контакты</Link>
           </div>
         </div>
         :

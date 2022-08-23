@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Сергей",
+      "login": "Serg2008",
+      "password": "qwerty",
+      "email": "xzn08@rambler.ru"
+    }
+  ]
+}

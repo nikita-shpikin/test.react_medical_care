@@ -18,6 +18,10 @@
   justify-content: space-between;
 }
 
+.authWrapper {
+  max-width: 477px;
+}
+
 .button {
   text-decoration: none;
   padding: 15px 40px;
@@ -98,5 +102,13 @@
   .title {
     font-size: 28px;
     line-height: 39px;
+  }
+
+  .authButton {
+    padding: 10px 10px;
+  }
+
+  .authWrapper {
+    max-width: 360px;
   }
 }
