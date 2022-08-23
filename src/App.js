@@ -10,6 +10,11 @@ const App = () => {
   const [openModal, setOpenModal] = useState(false);
   const [isAuth, setIsAuth] = useState(false);
 
+  const goOut = (e) => {
+    setIsAuth(false);
+    localStorage.removeItem('auth');
+  }
+
   useEffect(() => {
     if (localStorage.getItem('auth')) {
       setIsAuth(true);
@@ -17,7 +22,7 @@ const App = () => {
   }, []);
 
   return (
-    <AuthorizationContext.Provider value={{ isAuth, setIsAuth }}>
+    <AuthorizationContext.Provider value={{ isAuth, setIsAuth, goOut }}>
       <Routes>
         <Route path='/*' element={<Header setOpenModal={setOpenModal} />} >
           < Route index element={<Main openModal={openModal} setOpenModal={setOpenModal} />} />

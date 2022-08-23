@@ -7,8 +7,9 @@ import heart from '../../assets/heart.svg';
 import notebook from '../../assets/notebook.svg';
 import stetoskop from '../../assets/stetoskop.svg';
 
+
 const Main = ({ openModal, setOpenModal }) => {
-  const { isAuth, setIsAuth } = useContext(AuthorizationContext);
+  const { isAuth, setIsAuth, goOut } = useContext(AuthorizationContext);
 
   return (
     <>
@@ -16,7 +17,7 @@ const Main = ({ openModal, setOpenModal }) => {
         ? <div className={style.main}>
           <h1 className={style.title} style={{ marginTop: '45px' }}>Привет, Сергей</h1>
           <div className={style.wrapper + ' ' + style.authWrapper} >
-            <button className={style.button + ' ' + style.authButton} onClick={() => setIsAuth(false)} > Выйти из аккаунта </button>
+            <button className={style.button + ' ' + style.authButton} onClick={goOut} > Выйти из аккаунта </button>
             <Link to='/contacts' className={style.button + ' ' + style.authButton} >Перейти в контакты</Link>
           </div>
         </div>

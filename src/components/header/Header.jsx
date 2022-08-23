@@ -5,12 +5,7 @@ import style from './header.module.css';
 import logo from '../../assets/logo.svg';
 
 const Header = ({ setOpenModal }) => {
-  const { isAuth, setIsAuth } = useContext(AuthorizationContext);
-
-  const goOut = (e) => {
-    setIsAuth(false);
-    localStorage.removeItem('auth');
-  }
+  const { isAuth, setIsAuth, goOut } = useContext(AuthorizationContext);
 
   return (
     <div className='container'>

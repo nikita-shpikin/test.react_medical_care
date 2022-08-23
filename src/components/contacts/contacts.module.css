@@ -6,3 +6,11 @@
   letter-spacing: 0.2px;
   color: #252B42;
 }
+
+@media screen and (max-width: 600px) {
+  .title {
+    margin: 90px 10px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
