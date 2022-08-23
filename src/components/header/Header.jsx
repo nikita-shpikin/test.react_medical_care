@@ -10,7 +10,6 @@ const Header = ({ setOpenModal }) => {
   const goOut = (e) => {
     setIsAuth(false);
     localStorage.removeItem('auth');
-    // e.preventDefault();
   }
 
   return (

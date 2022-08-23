@@ -9,6 +9,7 @@ const Modal = ({ openModal, setOpenModal }) => {
     e.preventDefault();
     setIsAuth(true);
     localStorage.setItem('auth', 'true');
+    setOpenModal(false);
   }
 
   return (
