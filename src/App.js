@@ -25,7 +25,7 @@ const App = () => {
     <AuthorizationContext.Provider value={{ isAuth, setIsAuth, goOut }}>
       <Routes>
         <Route path='/*' element={<Header setOpenModal={setOpenModal} />} >
-          < Route index element={<Main openModal={openModal} setOpenModal={setOpenModal} />} />
+          <Route index element={<Main openModal={openModal} setOpenModal={setOpenModal} />} />
           <Route path='contacts' element={<Contacts openModal={openModal} setOpenModal={setOpenModal} />} />
 
         </Route>
